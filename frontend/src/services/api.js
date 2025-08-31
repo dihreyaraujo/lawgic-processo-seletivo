@@ -7,4 +7,13 @@ const api = axios.create({
   }
 });
 
-export default api;
+const getNotificationFormData = async () => {
+  const response = await api.get('/notifications/form');
+  return response.data;
+};
+
+const apiService = {
+  getNotificationFormData
+};
+
+export default apiService;
