@@ -32,12 +32,16 @@ const updateStatus = async (id, status) => {
   return response.data;
 };
 
-const apiService = {
+const getNotifications = async () => {
+  const response = await api.get('/notifications');
+  return response.data;
+};
+
+export {
   getNotificationFormData,
   createNotification,
   getNotificationById,
+  getNotifications,
   updateNotification,
   updateStatus
 };
-
-export default apiService;

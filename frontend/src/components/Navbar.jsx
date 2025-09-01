@@ -1,13 +1,14 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../images/logo.png';
+import MacTrafficLights from './StyleWindow';
 import '../styles/Navbar.css'
 
 export default function Navbar() {
   return (
     <nav className='navbar'>
-      <Link className='navbar-logo' to="/">Lawgic</Link>
+      <Link to="/"><img className='navbar-logo' src={logo} alt="Lawgic" /></Link>
       <div>
-        <NavLink className='navbar-links' to="/notificacoes">Notificações</NavLink>
-        <NavLink className='navbar-links' to="/notificacoes/nova">Criar</NavLink>
+        <MacTrafficLights />
       </div>
     </nav>
   )

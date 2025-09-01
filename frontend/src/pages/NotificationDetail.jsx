@@ -35,7 +35,7 @@ export default function NotificationDetail() {
       const formResponse = await getNotificationFormData();
       setFormData(formResponse);
       const notificationResponse = await getNotificationById(id);
-      setDataInTheForm(notificationResponse);
+      setDataInTheForm(notificationResponse.items);
     };
 
     fetchFormData();
