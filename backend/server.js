@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/notifications', notificationRoutes);
+app.use('/notifications', notificationRoutes);
 
 const PORT = process.env.PORT || 4000
 sequelize.sync({ alter: true }).then(() => {
