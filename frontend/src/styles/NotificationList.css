@@ -109,3 +109,39 @@ tbody tr:hover {
 .link-detail {
   color: black;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.pagination button {
+  border: none;
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.pagination button:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.pagination button.active {
+  background: #143155e8;
+  color: #fff;
+  font-weight: bold;
+}
+
+.notification-notfound {
+  text-align: center;
+  color: #6b7280; /* cinza médio */
+  font-size: 16px;
+  margin-top: 2rem;
+}
+
