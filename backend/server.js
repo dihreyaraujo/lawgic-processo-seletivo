@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import { sequelize } from './models/index.js';
 import notificationRoutes from './routes/notificationRoutes.js';
+import formSchemaRoutes from './routes/formSchemaRoutes.js';
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/notifications', notificationRoutes);
+app.use('/form-schema', formSchemaRoutes);
 
 const PORT = process.env.PORT || 4000
 sequelize.sync({ alter: true }).then(() => {

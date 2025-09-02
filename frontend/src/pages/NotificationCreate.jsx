@@ -21,13 +21,8 @@ export default function NotificationCreate() {
     fetchFormData();
   }, []);
 
-  if (!formData) {
-    return (
-      <Loader />
-    );
-  }
-
-  const onSubmit = async () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
     const response = await createNotification({ title, description, hearingDate, status: 'EM_ANDAMENTO' });
     if ('id' in response) navigate(`/notificacoes/${response.id}`)
   }
@@ -52,7 +47,9 @@ export default function NotificationCreate() {
   return (
     <div className='notification-create'>
       <h1>Criar Notificação</h1>
-      <FormRenderer formData={formData['CREATE']} onSubmit={onSubmit} submitLabel="Criar" setState={handleFieldChange} />
+      {!formData ? <Loader /> : (
+        <FormRenderer formData={formData['CREATE']} onSubmit={onSubmit} submitLabel="Criar" setState={handleFieldChange} />
+      )}
     </div>
   )
 }

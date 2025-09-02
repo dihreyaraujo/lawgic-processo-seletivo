@@ -10,10 +10,10 @@ body {
 }
 
 .layout {
-  height: 92vh;
+  height: 95vh;
   width: 80vw;
   margin: auto;
-  margin-top: 3%;
+  margin-top: 2.5%;
   transform: translateY(-3%);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.205);
   border-radius: 8px;

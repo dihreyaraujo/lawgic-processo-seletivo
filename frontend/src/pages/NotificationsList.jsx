@@ -12,7 +12,6 @@ export default function NotificationsList() {
   useEffect(() => {
     const fetchFormData = async () => {
       const notificationResponse = await getNotifications();
-      console.log(notificationResponse);
       setDataInTheForm(notificationResponse.items);
     };
 

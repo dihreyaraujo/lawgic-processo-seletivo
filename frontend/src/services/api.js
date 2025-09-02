@@ -8,7 +8,7 @@ const api = axios.create({
 });
 
 const getNotificationFormData = async () => {
-  const response = await api.get('/notifications/form');
+  const response = await api.get('/form-schema');
   return response.data;
 };
 
@@ -23,7 +23,9 @@ const getNotificationById = async (id) => {
 };
 
 const updateNotification = async (id, data) => {
+  console.log("DATACHAMADA: ", data);
   const response = await api.put(`/notifications/${id}`, data);
+  console.log("RESPONSEDATA: ", response.data);
   return response.data;
 };
 

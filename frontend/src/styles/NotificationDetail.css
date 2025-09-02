@@ -1,0 +1,13 @@
+.notification-detail h1 {
+  color: #17375E;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.statusDetail {
+  text-align: center;
+  margin: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
