@@ -19,6 +19,19 @@ export default function NotificationsList() {
     fetchFormData();
   }, []);
 
+  const statusConvert = (status) => {
+    switch (status) {
+      case 'VALIDACAO':
+        return 'Validação';
+      case 'CONCLUIDO':
+        return 'Concluído';
+      case 'EM_ANDAMENTO':
+        return 'Em Andamento';
+      default:
+        return status;
+    }
+  };
+
   const tabelaData = (
     <table>
         <thead>
@@ -39,7 +52,7 @@ export default function NotificationsList() {
                 <td>{notification.description.slice(0,32)}{notification.description.length > 32 ? '...' : ''}</td>
                 <td>{formatDate(notification.hearingDate)}</td>
                 <td>{notification.notifiedName || '-'}</td>
-                <td className={`status ${notification.status.toLowerCase()}`}>{notification.status}</td>
+                <td className={`status ${notification.status.toLowerCase()}`}>{statusConvert(notification.status)}</td>
                 <td><Link to={`/notificacoes/${notification.id}`} className='link-detail'>Ver Detalhes</Link></td>
               </tr>
             ))

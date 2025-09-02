@@ -4,3 +4,18 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+  background-color: #f0f0f077;
+}
+
+.layout {
+  height: 92vh;
+  width: 80vw;
+  margin: auto;
+  margin-top: 3%;
+  transform: translateY(-3%);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.205);
+  border-radius: 8px;
+  background-color: white;
+}

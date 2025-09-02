@@ -67,9 +67,9 @@ export default function MacTrafficLights({
         }
         .ml-light:active { transform: translateY(0.5px); }
 
-        .ml-red    { background: radial-gradient(circle at 30% 30%, #ff8a80, #ff5f57); color: #5a0f0a; }
-        .ml-yellow { background: radial-gradient(circle at 30% 30%, #ffe082, #febc2e); color: #7a4e00; }
-        .ml-green  { background: radial-gradient(circle at 30% 30%, #8cf2a3, #28c840); color: #0a4d1a; }
+        .ml-red    { background: radial-gradient(circle at 30% 30%, #ff8a80, #ff5f57); color: #5a0f0a; cursor: pointer; }
+        .ml-yellow { background: radial-gradient(circle at 30% 30%, #ffe082, #febc2e); color: #7a4e00; cursor: pointer; }
+        .ml-green  { background: radial-gradient(circle at 30% 30%, #8cf2a3, #28c840); color: #0a4d1a; cursor: pointer; }
 
         .ml-icon { display: grid; place-items: center; line-height: 0; transition: opacity .15s ease; }
         .ml-icon-hide { opacity: 0; }

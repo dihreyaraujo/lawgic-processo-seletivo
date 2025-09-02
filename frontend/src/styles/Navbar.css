@@ -1,11 +1,14 @@
 .navbar {
   background-color: #143155;
-  height: 60px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 16px;
   border-radius: 8px 8px 0 0;
+  box-shadow:
+    -1px -1px 10px rgba(0, 0, 0, 0.205),  /* esquerda + cima */
+     1px -1px 10px rgba(0,0,0,0.205);  /* direita + cima */
 }
 
 .navbar-logo {

@@ -4,8 +4,10 @@ import './styles/App.css'
 
 export default function App() {
   return (
-    <Layout>
-      <RoutesRoot />
-    </Layout>
+    <div className='layout-container'>
+      <Layout>
+        <RoutesRoot />
+      </Layout>
+    </div>
   )
 };
