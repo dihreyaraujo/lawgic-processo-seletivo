@@ -23,6 +23,11 @@ export default function NotificationCreate() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    const form = event.target.closest("form"); 
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     const response = await createNotification({ title, description, hearingDate, status: 'EM_ANDAMENTO' });
     if ('id' in response) navigate(`/notificacoes/${response.id}`)
   }

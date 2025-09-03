@@ -1,4 +1,3 @@
-// controllers/formSchemaController.js
 const SCHEMAS = {
   CREATE: {
     fields: [
@@ -13,8 +12,8 @@ const SCHEMAS = {
       { name: "description", label: "Descrição", type: "textarea", required: true },
       { name: "hearingDate", label: "Data da Audiência", type: "date", required: true },
       { name: "notifiedName", label: "Nome do Notificado", type: "text", required: true, placeholder: "Digite o nome do notificado" },
-      { name: "notifiedEmail", label: "Email", type: "text", required: true, placeholder: "Digite o email" },
-      { name: "notifiedPhone", label: "Telefone", type: "text", required: true, placeholder: "Digite o telefone" },
+      { name: "notifiedEmail", label: "Email", type: "email", required: true, placeholder: "Ex: teste@teste.com" },
+      { name: "notifiedPhone", label: "Telefone", type: "tel", required: true, placeholder: "Ex: 21997564321", pattern: "[0-9]{11,}", minLength: "11", maxLength: "11" },
       { name: "notifiedAddress", label: "Endereço", type: "text", required: true, placeholder: "Digite o endereço" }
     ]
   },

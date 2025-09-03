@@ -29,9 +29,9 @@
 .notification-list {
   background: #fff;
   border-radius: 8px;
-  border: 1px solid #e5e7eb; /* cinza claro */
+  border: 1px solid #e5e7eb;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  overflow-x: auto; /* caso tenha muitas colunas */
+  overflow-x: auto;
   width: 90%;
   margin: auto;
 }
@@ -46,10 +46,9 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
-  color: #374151; /* cinza escuro */
+  color: #374151;
 }
 
-/* Cabeçalho */
 thead {
   background-color: #f9fafb;
 }
@@ -62,7 +61,6 @@ thead th {
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* Linhas */
 tbody tr {
   border-bottom: 1px solid #f1f1f1;
 }
@@ -76,12 +74,10 @@ tbody td {
   vertical-align: middle;
 }
 
-/* Alternância de cor em hover */
 tbody tr:hover {
   background-color: #f9fafb;
 }
 
-/* STATUS */
 .status {
   display: inline-block;
   padding: 0.3rem 0.6rem;
@@ -140,7 +136,7 @@ tbody tr:hover {
 
 .notification-notfound {
   text-align: center;
-  color: #6b7280; /* cinza médio */
+  color: #6b7280;
   font-size: 16px;
   margin-top: 2rem;
 }

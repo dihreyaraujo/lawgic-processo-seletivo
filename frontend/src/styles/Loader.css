@@ -6,8 +6,8 @@
 }
 
 .spinner {
-  border: 4px solid #E5E7EB; /* cinza claro */
-  border-top: 4px solid #1B2A49; /* azul escuro */
+  border: 4px solid #E5E7EB;
+  border-top: 4px solid #1B2A49;
   border-radius: 50%;
   width: 30px;
   height: 30px;

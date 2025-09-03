@@ -8,7 +8,7 @@ export default function FormRenderer({ formData, onSubmit, submitLabel, setState
           {formData.fields.map((field, index) => (
             <div key={index} className='form-field'>
               <label>{field.label}</label>
-              <input onChange={(e) => setState(e)} type={field.type} name={field.name} placeholder={field.placeholder} required={field.required} readOnly={field.readOnly || false} defaultValue={defaultValues ? defaultValues[field.name] || '' : ''} />
+              <input onChange={(e) => setState(e)} minLength={field.minLength || undefined} maxLength={field.maxLength || undefined} pattern={field.pattern || undefined} type={field.type} name={field.name} placeholder={field.placeholder} required={field.required} readOnly={field.readOnly || false} defaultValue={defaultValues ? defaultValues[field.name] || '' : ''} />
             </div>
           ))}
         </div>

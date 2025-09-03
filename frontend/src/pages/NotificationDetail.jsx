@@ -52,8 +52,13 @@ export default function NotificationDetail() {
     notifiedAddress
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target.closest("form"); 
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     await updateNotification(id, formValues);
     await updateStatus(id, 'VALIDACAO');
     setStatus('VALIDACAO');

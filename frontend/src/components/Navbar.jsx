@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import MacTrafficLights from './StyleWindow';
 import '../styles/Navbar.css'

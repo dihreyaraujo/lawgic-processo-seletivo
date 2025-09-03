@@ -1,15 +1,12 @@
 function formatDate(input) {
   try {
-    // Se já for Date
     let date;
     if (input instanceof Date) {
       date = input;
     } else {
-      // Converte string ou número em Date
       date = new Date(input);
     }
 
-    // Se não for uma data válida
     if (isNaN(date.getTime())) {
       throw new Error("Data inválida");
     }
@@ -20,7 +17,7 @@ function formatDate(input) {
 
     return `${dia}/${mes}/${ano}`;
   } catch (e) {
-    return null; // ou lança erro
+    return null;
   }
 }
 export default formatDate;

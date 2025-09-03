@@ -29,10 +29,9 @@ export default function NotificationsList() {
     }
   };
 
-  // Paginação
-  const totalPages = dataInTheForm ? Math.ceil(dataInTheForm.length / itemsPerPage) : 0;
+  const totalPages = Array.isArray(dataInTheForm) && dataInTheForm ? Math.ceil(dataInTheForm.length / itemsPerPage) : 0;
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedData = dataInTheForm?.slice(startIndex, startIndex + itemsPerPage);
+  const paginatedData = Array.isArray(dataInTheForm) && dataInTheForm?.slice(startIndex, startIndex + itemsPerPage);
 
   const tabelaData = (
     <table>
@@ -47,7 +46,7 @@ export default function NotificationsList() {
         </tr>
       </thead>
       <tbody>
-        {
+        { !Array.isArray(dataInTheForm) ? '' :
           paginatedData?.map(notification => (
             <tr key={notification.id}>
               <td>{notification.title}</td>
